@@ -1,0 +1,4 @@
+input_features:
+-name: image_path
+type: image
+

@@ -1,0 +1,19 @@
+input_features:
+  - name: Seattle
+    type: timeseries
+    preprocessing:
+      window_size: 10
+    encoder:
+      type: passthrough
+  - name: datetime
+    type: date
+output_features:
+  - name: Seattle
+    type: number
+combiner:
+  type: concat
+  flatten_inputs: true
+preprocessing:
+  split:
+    type: datetime
+    column: datetime
